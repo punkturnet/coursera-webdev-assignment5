@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+      <div ng-if="myInfoCtrl.user.firstname !== undefined">
+        <strong>First name: </strong>{{myInfoCtrl.user.firstname}}<br/>
+        <strong>Last name: </strong>{{myInfoCtrl.user.lastname}}<br/>
+        <strong>Email: </strong>{{myInfoCtrl.user.email}}<br/>
+        <strong>Phone number: </strong>{{myInfoCtrl.user.phonenumber}}<br/>
+        <strong>Menu number: </strong>{{myInfoCtrl.user.menunumber}}
+      </div>
+      <div ng-if="myInfoCtrl.user.firstname == undefined">
+        Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+      </div>
+    </div>
+  </div>
+</div>
