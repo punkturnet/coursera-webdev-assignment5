@@ -32,14 +32,14 @@
 
           <input type="text" name="phone" class="form-control" placeholder="Phone ###-###-####"
             ng-model="signupCtrl.user.phone"
-            pattern="(\d{3})-(\d{3})-(\d{4})">
+            pattern="(\d{3})-(\d{3})-(\d{4})" required>
             <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
               Phone must be in the format ###-###-####.
             </span>
             <br>
 
           <input type="text" name="menunumber" class="form-control" placeholder="Menu number"
-              ng-model="signupCtrl.user.menunumber" required>
+              ng-model="signupCtrl.user.menunumber">
               <span
                 ng-if="(regForm.menunumber.$error.required) && regForm.menunumber.$touched">
                 You must enter a menu number!
