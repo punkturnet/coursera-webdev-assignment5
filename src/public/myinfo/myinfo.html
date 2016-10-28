@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+    <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12">
       <div ng-if="myInfoCtrl.user.firstname !== undefined">
         <strong>First name: </strong>{{myInfoCtrl.user.firstname}}<br/>
         <strong>Last name: </strong>{{myInfoCtrl.user.lastname}}<br/>
@@ -12,5 +12,15 @@
         Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
       </div>
     </div>
+    <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+      <div class="menu-item-photo">
+        <div>{{myInfoCtrl.user.menuItem.short_name}}</div>
+        <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.user.menuItem.short_name}}.jpg" alt="{{$myInfoCtrl.user.menuItem.name}}">
+      </div>
+      <div class="menu-item-price">{{myInfoCtrl.user.menuItem.price_small | currency}}<span> {{myInfoCtrl.user.menuItem.small_portion_name}}</span> {{myInfoCtrl.user.menuItem.price_large | currency}} <span>{{myInfoCtrl.user.menuItem.large_portion_name}}</span></div>
+      <h3 class="menu-item-title">{{myInfoCtrl.user.menuItem.name}}</h3>
+      <p class="menu-item-details">{{myInfoCtrl.user.menuItem.description}}</p>
+    </div>
+
   </div>
 </div>
